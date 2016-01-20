@@ -5,6 +5,7 @@ const {on, Component,computed,get,$} = Ember;
 export default Component.extend({
 	actions:{
 	  submit(){
+			if(!this.attrs.submit === undefined) return;
 			let result = get(this.attrs,"submit")();
 			if(result === true || result === false){
 				this.hidePopover();
