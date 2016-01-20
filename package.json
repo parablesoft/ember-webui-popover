@@ -1,7 +1,7 @@
 {
   "name": "ember-webui-popover",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Wrapper for webui-popover. Very much a WIP.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -41,7 +41,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5"
+    "ember-cli-babel": "^5.1.5",
+    "ember-cli-htmlbars": "^1.0.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

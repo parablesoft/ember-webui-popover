@@ -1,0 +1,30 @@
+{{link-to "Go Away" "away"}}
+<hr/>
+{{#webui-popover 
+placement="right"
+trigger-text="Foo" trigger-class-names="btn btn-default"
+submit=(action "createSomething")
+close=(action "close")
+as |submit close|
+}}
+<form {{action submit on="submit"}}>
+	<div>
+		<label>Put a value in here</label><br/>
+		{{input value=someValue}}
+	</div>
+	<div>
+		<label>Put another value in here</label><br/>
+		{{input value=someOtherValue}}
+	</div>
+	<button>Submit</button> or 
+	<a href="#" {{action close}}>cancel</a>
+</form>
+{{/webui-popover}}
+
+
+<div style="text-align:right">
+{{#webui-popover 
+trigger-text="Click Me"}}
+	BAM!
+{{/webui-popover}}
+</div>
