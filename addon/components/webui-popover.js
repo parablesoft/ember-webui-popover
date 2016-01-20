@@ -1,12 +1,12 @@
 import Ember from 'ember';
 import layout from '../templates/components/webui-popover';
 
-const {on, Component,computed,get} = Ember;
+const {on, Component,computed,get,$} = Ember;
 export default Component.extend({
 	actions:{
 	  submit(){
 			let result = get(this.attrs,"submit")();
-			if(result == true || result == false){
+			if(result === true || result === false){
 				this.hidePopover();
 			}
 			else{
@@ -20,7 +20,9 @@ export default Component.extend({
 	  },
 		close(){
 			this.hidePopover();
-			this.attrs.close();
+			if(this.attrs.close != undefined){
+				this.attrs.close();
+			}
 		}
 	},
   layout: layout,

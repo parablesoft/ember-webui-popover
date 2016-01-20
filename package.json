@@ -1,6 +1,6 @@
 {
   "name": "ember-webui-popover",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrapper for webui-popover. Very much a WIP.",
   "directories": {
     "doc": "doc",
