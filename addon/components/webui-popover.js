@@ -2,6 +2,8 @@ import Ember from 'ember';
 import layout from '../templates/components/webui-popover';
 
 const {on, Component,computed,get,$} = Ember;
+const {htmlSafe} = Ember.String;
+
 export default Component.extend({
 	actions:{
 	  submit(){
@@ -32,6 +34,10 @@ export default Component.extend({
 	animation: "pop",
 	cache: false,
 	padding: true,
+	triggerText: computed("trigger-text",function(){
+
+		return htmlSafe(get(this,"trigger-text"));
+	}),
 	multi: false,
 	load: on("didInsertElement", function(){
 		this.popoverTriggerElement().webuiPopover({
