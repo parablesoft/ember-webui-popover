@@ -35,7 +35,6 @@ export default Component.extend({
 	cache: false,
 	padding: true,
 	triggerText: computed("trigger-text",function(){
-
 		return htmlSafe(get(this,"trigger-text"));
 	}),
 	multi: false,

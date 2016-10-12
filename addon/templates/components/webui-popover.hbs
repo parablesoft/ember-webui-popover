@@ -1,4 +1,9 @@
-<a id="{{triggerId}}" href="#" class="{{trigger-class-names}}">{{triggerText}}</a>
+<a id="{{triggerId}}" href="#" class="{{trigger-class-names}}">
+{{#if  triggerIcon}}
+<i class="fa-icon fa-{{triggerIcon}}"></i> 
+{{/if}}
+{{triggerText}}
+</a>
 	<div id="{{popoverContainerId}}" class="webui-popover-content">
 		{{yield (action 'submit') (action "close")}}
 	</div>
