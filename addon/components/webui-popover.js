@@ -42,6 +42,7 @@ export default Component.extend({
 		this.popoverTriggerElement().webuiPopover({
 			animation: get(this,"animation"),
 			cache: get(this,"cache"),
+			container: get(this,"container"),
 			url: `#${get(this,"popoverContainerId")}`,
 			padding: get(this,"padding"),
 			placement: get(this,"placement"),
