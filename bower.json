@@ -12,6 +12,6 @@
     "jquery": "^2.0.0",
     "loader.js": "ember-cli/loader.js#3.4.0",
     "qunit": "~1.20.0",
-    "webui-popover": "~1.2.5"
+    "webui-popover": "^2.1.15"
   }
 }
